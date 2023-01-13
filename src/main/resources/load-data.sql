@@ -1,0 +1,1 @@
+insert into state(name, type, region, capital, population) values ('Ayeyarwady', 'Region', 'Lower','Pathein', 857483);
