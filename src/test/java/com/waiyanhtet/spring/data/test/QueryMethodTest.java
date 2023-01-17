@@ -53,7 +53,4 @@ public class QueryMethodTest {
 		assertThat(state, hasSize(size));
 	}
 	
-	void find_by_
-	
-	
 }
