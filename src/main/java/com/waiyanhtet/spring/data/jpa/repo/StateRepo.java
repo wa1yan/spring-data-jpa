@@ -11,6 +11,8 @@ public interface StateRepo extends JpaRepository<State, Integer>{
 	State findByName(String name);
 	
 	List<State> findByRegion(String region);
+
+	List<State> findByNameLike(String name);
 	
 	
 }
