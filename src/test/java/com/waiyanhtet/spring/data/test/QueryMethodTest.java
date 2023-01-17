@@ -34,6 +34,16 @@ public class QueryMethodTest {
 		));
 	}
 	
+			
+	@ParameterizedTest
+	@CsvSource(value = {"""
+			Ya, 2
+			"""})
+	void find_by_name_contains_test(String name, int size) {
+		var state = stateRepo.findByNameContains(name);
+		assertThat(state, hasSize(size));
+	}
+			    
 	@ParameterizedTest
 	@CsvSource(value = {"""
 			Lower, 3
@@ -42,8 +52,5 @@ public class QueryMethodTest {
 		var state = stateRepo.findByRegion(region);
 		assertThat(state, hasSize(size));
 	}
-	
-	void find_by_
-	
 	
 }
