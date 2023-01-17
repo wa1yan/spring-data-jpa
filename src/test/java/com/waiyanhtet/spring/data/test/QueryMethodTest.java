@@ -34,7 +34,16 @@ public class QueryMethodTest {
 		));
 	}
 	
-	@Disabled
+			
+	@ParameterizedTest
+	@CsvSource(value = {"""
+			Ya, 2
+			"""})
+	void find_by_name_contains_test(String name, int size) {
+		var state = stateRepo.findByNameContains(name);
+		assertThat(state, hasSize(size));
+	}
+	
 	@ParameterizedTest
 	@CsvSource(value = {"""
 			Lower, 4
@@ -44,13 +53,7 @@ public class QueryMethodTest {
 		assertThat(state, hasSize(size));
 	}
 	
-	@Disabled
-	@ParameterizedTest
-	@CsvSource(value = {"""
-			Ya, 2
-			"""})
-	void find_by_name_like_test(String name, int size) {
-		var state = stateRepo.findByNameLike(name.concat("%"));
-		assertThat(state, hasSize(size));
-	}
+	void find_by_
+	
+	
 }
