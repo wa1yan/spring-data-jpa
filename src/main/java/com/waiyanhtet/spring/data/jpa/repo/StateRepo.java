@@ -15,5 +15,7 @@ public interface StateRepo extends JpaRepository<State, Integer>{
 	List<State> findByNameLike(String name);
 	
 	List<State> findByNameContains(String name);
+
+	State updateByName(String name);
 	
 }
