@@ -20,6 +20,6 @@ public interface StateRepo extends JpaRepository<State, Integer>{
 	
 	List<State> findByNameContains(String name);
 
-	State updateByName(String name);
+	//State updateByName(String name);
 	
 }

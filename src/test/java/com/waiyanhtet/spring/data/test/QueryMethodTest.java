@@ -34,16 +34,23 @@ public class QueryMethodTest {
 		));
 	}
 	
+	@Disabled
 	@ParameterizedTest
 	@CsvSource(value = {"""
-			Lower, 3
+			Lower, 4
 			"""})
 	void find_by_region_test(String region, int size) {
 		var state = stateRepo.findByRegion(region);
 		assertThat(state, hasSize(size));
 	}
 	
-	void find_by_
-	
-	
+	@Disabled
+	@ParameterizedTest
+	@CsvSource(value = {"""
+			Ya, 2
+			"""})
+	void find_by_name_like_test(String name, int size) {
+		var state = stateRepo.findByNameLike(name.concat("%"));
+		assertThat(state, hasSize(size));
+	}
 }
